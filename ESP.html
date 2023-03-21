@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<script type="text/javascript" src="jquery-1.12.0.min.js"></script>
+	<script type="text/javascript" src="Chart.bundle.min.js"></script>
+  	<script type="text/javascript" src="firebase.js"></script>
+  	<script type="text/javascript" src="ConexionFirebase.js"></script>
+
+	<title>SineQuan-ON</title>
+</head>
+<body id="IngresoHTML">
+
+    <span id="Titulo">SineQuan-On</span>
+	<div class="cuerpo" id="cuerpo">
+		<div id="AddDevice"></div>
+	</div>
+
+    <div id="Ajustes">
+        <div id="Panel">
+            <span id="Ptitulo">Panel de Ajustes</span>
+            <label>Parámetros API</label><textarea id="API"></textarea>
+            <label>Cantidad de Bloques</label><input id="CantBloques" type="text" name="">
+            <label>Tipo ESP</label>
+            <select id="lista" name="select">
+              <option value="0">ESP8266 - Witty ESP-12F</option>
+              <option value="1">ESP8266 - NodeMCU</option>
+              <option value="2">ESP8266 - Modelo ESP-03</option>
+              <option value="3">ESP8266 - Modelo ESP-05</option>
+              <option value="4">ESP8266 - Modelo ESP-12E</option>
+              <option value="5">ESP8266 - Modelo ESP-12F</option>
+            </select>
+        </div>
+        <button id="Guardar" onclick="proceso();">Guardar</button>
+    </div>
+
+	<div class="footer">
+		<div class="Pie"><img id="addDis" src="mas.png"></div>
+	</div>
+
+	<script type="text/javascript" src="BotonesAdd.js"></script>
+	<script type="text/javascript" src="chat.js"></script>
+</body>
+</html>
