@@ -16,3 +16,4 @@ git add --all
 git commit -m "Descripción del ajuste o modificación"
 
 5. Nuevo dato
+6. Commit
