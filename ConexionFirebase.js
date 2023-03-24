@@ -1,8 +1,8 @@
-var incremento = 0;
-var decremento = 0;
-var firebaseconfig;
-var WESP = [];
-var seleccion;
+let incremento = 0;
+let decremento = 0;
+let firebaseconfig;
+let WESP = [];
+let seleccion;
 
 WESP[0] = { //ESP8266 - Witty ESP-12F
 	  GPIO0: 0, GPIO1: 1, GPIO2: 2, GPIO3: 3, GPIO4: 4,
@@ -19,23 +19,10 @@ if(!!localStorage.getItem("ConFirebase")){
 }
 
 function procesoR(fire){
-seleccion = 0; //document.getElementById("lista").value;
+seleccion = 0;
 firebaseconfig = fire;
 firebaseconfig = firebaseconfig.replaceAll("\n","");
 firebaseconfig = JSON.parse(firebaseconfig);
-
-/*
-var firebaseconfig = {
-  "apiKey": "AIzaSyARt76OGmsErvq98lC6WgtPNPjmRwEYGvc",
-  "authDomain": "espiot-c42bc.firebaseapp.com",
-  "databaseURL": "https://espiot-c42bc.firebaseio.com",
-  "projectId": "espiot-c42bc",
-  "storageBucket": "espiot-c42bc.appspot.com",
-  "messagingSenderId": "294917733350",
-  "appId": "1:294917733350:web:3a5eb6cbe389d110b87427",
-  "measurementId": "G-JE2EFGVKPK"
-};
-*/
 
 firebase.initializeApp(firebaseconfig);
 
